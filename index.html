@@ -227,7 +227,6 @@
 
     <!-- Call to Action -->
     <div class="max-w-7xl mx-auto mt-12">
-      <!-- CTA Banner -->
       <div class="bg-blue-50 border border-blue-100 border-2 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between">
         <div class="mb-6 md:mb-0">
           <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">Ready to transform your learning environment?</h2>
@@ -239,189 +238,168 @@
       </div>
     </div>
 
-    <div class="container mx-auto px-4 py-16 max-w-7xl">
-      <!-- Header -->
-      <div class="text-center mb-12">
-        <p class="text-sm font-semibold text-blue-600 mb-2">Pricing</p>
-        <h1 class="text-3xl md:text-4xl font-semibold text-gray-900">Simple, transparent pricing</h1>
-        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Choose the plan that works best for your educational needs. All plans include core features to get you started.</p>
+    <div class="container mx-auto px-4 py-20 max-w-6xl">
+      <!-- Heading -->
+      <div class="text-center mb-16">
+        <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight">Simple Pricing</h1>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Transparent costs designed to fit schools of all sizes. Pay once for setup, then a fair monthly fee based on your students.</p>
       </div>
 
-      <!-- Toggle Switch -->
+      <!-- Pricing Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Installation Fee -->
+        <div class="relative bg-white border border-gray-200 shadow-lg rounded-2xl p-10 text-center hover:shadow-xl transition">
+          <div class="absolute -top-3 right-5 bg-green-100 text-green-700 text-sm px-4 py-1 rounded-full font-semibold shadow-sm">50% OFF</div>
+          <p class="text-gray-500 text-sm mb-3 uppercase tracking-wide">One-time Installation</p>
+          <h2 class="text-2xl font-bold text-gray-900 mb-2">
+            <span class="line-through text-gray-400">৳100,000</span>
+          </h2>
+          <h2 class="text-5xl font-extrabold text-green-600 mb-4">৳50,000</h2>
+          <p class="text-gray-500 text-sm">Billed once during setup</p>
+        </div>
 
-      <div class="flex justify-center mb-8">
-        <div class="toggle-container">
-          <div class="toggle-slider" id="toggle-slider"></div>
-          <div class="toggle-option active" id="monthly-option">Monthly</div>
-          <div class="toggle-option ml-2" id="yearly-option">Yearly <span class="text-xs text-blue-200">Save 20%</span></div>
+        <!-- Small Schools -->
+        <div class="bg-gradient-to-br from-blue-50 to-white border border-gray-200 shadow-lg rounded-2xl p-10 text-center hover:shadow-xl transition">
+          <p class="text-gray-600 text-sm mb-3 uppercase tracking-wide">For Small Schools</p>
+          <h2 class="text-5xl font-extrabold text-blue-600 mb-3">৳5,000<span class="text-lg font-medium text-gray-500">/mo</span></h2>
+          <p class="text-gray-500 text-sm">For schools with up to 500 students</p>
+        </div>
+
+        <!-- Large Schools -->
+        <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white shadow-xl rounded-2xl p-10 text-center transform hover:scale-105 transition">
+          <p class="text-blue-100 text-sm mb-3 uppercase tracking-wide">For Large Schools</p>
+          <h2 class="text-5xl font-extrabold mb-3">৳10<span class="text-lg font-medium">/student</span></h2>
+          <p class="text-blue-200 text-sm">For schools with more than 500 students</p>
         </div>
       </div>
 
-      <!-- Pricing Cards -->
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Basic Plan -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-          <div class="p-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-3">Basic</h2>
-            <p class="text-gray-600 mb-6">For individuals and small classes</p>
-            <div class="flex items-baseline mb-6">
-              <span class="text-3xl font-bold" id="basic-price">$9</span>
-              <span class="text-gray-500 ml-1">/month</span>
-            </div>
-            <button class="w-full cursor-pointer bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700 transition duration-300">Get Started</button>
-          </div>
-          <div class="border-t border-gray-200 p-6 space-y-4">
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Up to 50 active students</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Basic course builder</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Assignments & quizzes</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Student progress tracking</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Email support</p>
-            </div>
-          </div>
+      <!-- CTA -->
+      <div class="text-center mt-16">
+        <button class="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md bg-[#3A77EF] px-4 font-medium text-white duration-500 text-sm cursor-pointer">
+          <div class="translate-y-0 transition group-hover:-translate-y-[150%]">Get Started</div>
+          <div class="absolute translate-y-[150%] transition group-hover:translate-y-0">Get Started</div>
+        </button>
+      </div>
+    </div>
+
+    <div id="contact" class="bg-gray-50 py-20">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <!-- Heading -->
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-extrabold text-gray-900">Get in Touch</h2>
+          <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Have questions or want to get started? Fill out the form or reach us directly.</p>
         </div>
 
-        <!-- Professional Plan -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-2 border-blue-200 transform scale-105 md:scale-100 md:translate-y-0">
-          <div class="bg-blue-50 py-2 text-center">
-            <span class="text-sm font-medium text-blue-600">Most Popular</span>
-          </div>
-          <div class="p-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-3">Professional</h2>
-            <p class="text-gray-600 mb-6">For growing educational programs</p>
-            <div class="flex items-baseline mb-6">
-              <span class="text-3xl font-bold" id="pro-price">$29</span>
-              <span class="text-gray-500 ml-1">/month</span>
-            </div>
-            <button class="w-full cursor-pointer bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300">Start Free Trial</button>
-          </div>
-          <div class="border-t border-gray-200 p-6 space-y-4">
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Up to 500 active students</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Advanced course builder</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Custom assessments</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Advanced analytics</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Discussion forums</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Group projects</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Priority support</p>
-            </div>
-          </div>
-        </div>
+        <!-- Contact Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Contact Info -->
+          <div class="bg-white shadow-lg rounded-2xl p-10">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+            <p class="text-gray-600 mb-6">We’d love to hear from you! Reach us through phone or email.</p>
 
-        <!-- Enterprise Plan -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-          <div class="p-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-3">Enterprise</h2>
-            <p class="text-gray-600 mb-6">For institutions and organizations</p>
-            <div class="flex items-baseline mb-6">
-              <span class="text-3xl font-bold" id="enterprise-price">$99</span>
-              <span class="text-gray-500 ml-1">/month</span>
+            <div class="space-y-6">
+              <div class="flex items-center space-x-4">
+                <div class="bg-blue-100 text-blue-600 py-2 px-3 rounded-md"><i class="ri-customer-service-line text-xl"></i></div>
+                <div>
+                  <p class="text-sm text-gray-500">Call us</p>
+                  <p class="text-lg font-semibold text-gray-800">+880 1234 567 890</p>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-4">
+                <div class="bg-blue-100 text-blue-600 py-2 px-3 rounded-md"><i class="ri-mail-unread-line text-xl"></i></div>
+                <div>
+                  <p class="text-sm text-gray-500">Email us</p>
+                  <p class="text-lg font-semibold text-gray-800">info@schoolsoft.com</p>
+                </div>
+              </div>
             </div>
-            <button class="w-full cursor-pointer bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700 transition duration-300">Contact Sales</button>
           </div>
-          <div class="border-t border-gray-200 p-6 space-y-4">
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
+
+          <!-- Contact Form -->
+          <div class="bg-white shadow-lg rounded-2xl p-10">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
+            <form action="#" method="POST" class="space-y-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Your Name" />
               </div>
-              <p class="ml-2 text-gray-600">Unlimited active students</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                <input type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="you@example.com" />
               </div>
-              <p class="ml-2 text-gray-600">Custom integrations</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <textarea rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Write your message..."></textarea>
               </div>
-              <p class="ml-2 text-gray-600">Advanced security features</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Dedicated account manager</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">White-labeling options</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">API access</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">24/7 premium support</p>
-            </div>
+              <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-blue-700 transition">Send Message</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
+
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+      <div class="container mx-auto px-4 max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-12">
+        <!-- Brand -->
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-4">SchoolSoft</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">A modern School Management Software to simplify administration, save time, and keep everything organized.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
+            <li><a href="#features" class="hover:text-white transition">Features</a></li>
+            <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+            <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center space-x-2">
+              <i class="ri-map-pin-line text-blue-500"></i>
+              <span>Dhaka, Bangladesh</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="ri-phone-line text-blue-500"></i>
+              <span>+880 1234 567 890</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="ri-mail-line text-blue-500"></i>
+              <span>info@schoolsoft.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-blue-600 transition">
+              <i class="ri-facebook-fill text-xl"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-sky-400 transition">
+              <i class="ri-twitter-x-line text-xl"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-pink-500 transition">
+              <i class="ri-instagram-line text-xl"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-red-600 transition">
+              <i class="ri-youtube-fill text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">© 2025 SchoolSoft. All rights reserved.</div>
+    </footer>
 
     <!-- Scripts -->
     <script src="script.js"></script>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Hikmatech</title>
+    <link rel="icon" type="image/png" href="https://hikmatech.com/image/favicon.png" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  </head>
+
+  <body class="font-[Inter] bg-white text-gray-800">
+    <!-- Navbar -->
+    <header class="mx-auto max-w-6xl">
+      <div class="flex justify-between items-center py-4 px-6">
+        <!-- Logo Start -->
+        <a href="/">
+          <img src="logo.png" class="h-8" alt="" />
+        </a>
+        <!-- Logo End -->
+
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="/" class="text-gray-700 text-sm hover:text-indigo-950 transition duration-300">Home</a>
+          <a href="about.html" class="text-gray-700 text-sm hover:text-indigo-950 transition duration-300">About</a>
+          <a href="#" class="text-gray-700 text-sm hover:text-indigo-950 transition duration-300">Features</a>
+          <a href="contact.html" class="text-indigo-950 font-semibold text-sm hover:text-indigo-950 transition duration-300">Contact</a>
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <!-- <button class="group relative inline-flex h-9 items-center justify-center overflow-hidden rounded-md border border-gray-300 bg-white px-3 font-medium text-gray-800 text-sm cursor-pointer">
+              <span class="absolute h-0 w-0 rounded-full bg-gray-200 transition-all duration-300 group-hover:h-32 group-hover:w-32"></span>
+              <span class="relative">Sign In</span>
+            </button> -->
+
+          <button
+            class="group relative inline-flex items-center justify-center overflow-hidden gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-indigo-950 text-white hover:bg-indigo-900 h-9 rounded-md px-3 cursor-pointer">
+            <div class="translate-y-0 transition group-hover:-translate-y-[150%]">Book a Meeting</div>
+            <div class="absolute inset-0 flex items-center justify-center translate-y-[150%] transition group-hover:translate-y-0">Book a Meeting</div>
+          </button>
+
+          <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+            <i class="fas fa-bars text-gray-600 text-xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <div class="px-6 py-4 space-y-2 font-medium">
+          <a href="/" class="block text-gray-700 hover:text-indigo-950 transition duration-300">Home</a>
+          <a href="about.html" class="block text-gray-700 hover:text-indigo-950 transition duration-300">About</a>
+          <a href="#" class="block text-gray-700 hover:text-indigo-950 transition duration-300">Features</a>
+          <a href="contact.html" class="block text-gray-700 hover:text-indigo-950 transition duration-300">Contact</a>
+          <a href="#" class="block text-gray-700 hover:text-indigo-950 transition duration-300">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-indigo-50 to-blue-100 py-28 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-indigo-950 mb-4">Get in Touch</h1>
+        <p class="text-gray-600 text-lg leading-relaxed">Have questions or need assistance? We’re here to help you make the most of Hikmatech.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+        <!-- Contact Info -->
+        <div class="bg-gray-50 rounded-2xl shadow-md p-10">
+          <h2 class="text-2xl font-bold text-indigo-950 mb-6">Contact Information</h2>
+          <p class="text-gray-600 mb-6">Reach us via phone, email, or visit our office — our team is always ready to assist.</p>
+
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4">
+              <div class="bg-blue-100 text-indigo-900 py-3 px-3 rounded-md">
+                <i class="ri-customer-service-2-line text-2xl"></i>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500">Call Us</p>
+                <p class="text-lg font-semibold text-gray-800">+880 1590-089467</p>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="bg-blue-100 text-indigo-900 py-3 px-3 rounded-md">
+                <i class="ri-mail-line text-2xl"></i>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500">Email Us</p>
+                <p class="text-lg font-semibold text-gray-800">info@hikmatech.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="bg-blue-100 text-indigo-900 py-3 px-3 rounded-md">
+                <i class="ri-map-pin-line text-2xl"></i>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500">Our Location</p>
+                <p class="text-lg font-semibold text-gray-800">Dhaka, Bangladesh</p>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4 mt-4">
+              <div class="bg-blue-100 text-indigo-900 py-3 px-3 rounded-md">
+                <i class="ri-time-line text-2xl"></i>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500">Business Hours</p>
+                <p class="text-lg font-semibold text-gray-800">Sun–Thu: 9am – 6pm</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="mt-8 flex space-x-4">
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-indigo-950 text-white rounded-full hover:bg-indigo-900 transition">
+              <i class="ri-facebook-fill text-lg"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-indigo-950 text-white rounded-full hover:bg-indigo-900 transition">
+              <i class="ri-linkedin-box-fill text-lg"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-indigo-950 text-white rounded-full hover:bg-indigo-900 transition">
+              <i class="ri-instagram-line text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white shadow-lg rounded-2xl border border-gray-200 p-10">
+          <h2 class="text-2xl font-bold text-indigo-950 mb-6">Send Us a Message</h2>
+          <form action="#" method="POST" class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+              <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Your Name" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="you@example.com" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+              <textarea rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Write your message..." required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-indigo-950 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-900 transition">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Map -->
+    <section class="mt-12">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.845081064745!2d90.3905428745394!3d23.750903089103713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b93c4c24d0c9%3A0x5caa4b37c1a9d5b5!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1700000000000"
+        width="100%"
+        height="400"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="relative py-28 bg-indigo-950 overflow-hidden">
+      <!-- Background effects -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-indigo-700 rounded-full blur-3xl opacity-30"></div>
+      <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-600 rounded-full blur-3xl opacity-30"></div>
+
+      <div class="relative max-w-4xl mx-auto px-4 text-center">
+        <!-- Heading -->
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Digitize Your Institution?</h2>
+
+        <!-- Sub text -->
+        <p class="text-indigo-200 text-lg mb-10">Join schools, colleges, and madrasahs already simplifying their daily operations with Hikmatech.</p>
+
+        <!-- CTA Buttons -->
+        <div class="flex justify-center flex-wrap gap-4">
+          <!-- Primary CTA -->
+          <a href="#" class="inline-flex items-center justify-center gap-2 px-8 h-12 rounded-lg bg-white text-indigo-950 font-semibold hover:bg-indigo-100 transition">
+            <i class="fas fa-rocket"></i>
+            Start Your Free Trial
+          </a>
+
+          <!-- Secondary CTA -->
+          <a href="#" class="inline-flex items-center justify-center gap-2 px-8 h-12 rounded-lg border border-indigo-300 text-white hover:bg-white/10 transition">
+            <i class="fas fa-headset"></i>
+            Talk to Our Team
+          </a>
+        </div>
+
+        <!-- Trust Note -->
+        <p class="text-sm text-indigo-300 mt-8">No setup fee • Free onboarding • Dedicated support</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-12 px-6">
+        <div>
+          <img src="image/white logo.png" class="h-8 mb-6" />
+          <p class="text-gray-400 text-sm">A modern School Management Software to simplify administration and save time.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+            <li><a href="#" class="hover:text-white">Features</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-3 text-sm">
+            <li><i class="ri-map-pin-line text-indigo-900"></i> Dhaka, Bangladesh</li>
+            <li><i class="ri-phone-line text-indigo-900"></i> +880 1590-089467</li>
+            <li><i class="ri-mail-line text-indigo-900"></i> info@hikmatech.com</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+          <div class="flex space-x-3">
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-full hover:bg-blue-600 transition">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-full hover:bg-sky-400 transition">
+              <i class="ri-twitter-x-line"></i>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-full hover:bg-pink-500 transition">
+              <i class="ri-instagram-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">© 2025 Hikmatech. All rights reserved.</div>
+    </footer>
+  </body>
+</html>

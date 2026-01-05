@@ -3,298 +3,259 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://hikmatech.com/image/favicon.png" />
+    <link rel="apple-touch-icon" href="https://hikmatech.com/image/favicon.png" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <title>EduSphere</title>
+    <title>Hikmatech</title>
   </head>
   <body>
-    <section class="bg-gradient-to-br from-white to-blue-100">
-      <header class="mx-auto max-w-6xl">
-        <div class="flex justify-between items-center py-4 px-6">
-          <!-- Logo Start -->
-          <a href="#" style="display: flex; align-items: center; gap: 0.5rem">
-            <div style="width: 2rem; height: 2rem; background-color: #3a77ef; border-radius: 0.375rem; display: flex; align-items: center; justify-content: center">
-              <span style="color: white; font-size: 1.5rem; font-weight: 600">E</span>
-            </div>
-            <span style="font-size: 1.25rem; font-weight: 600; letter-spacing: -0.025em">Eduflow</span>
-          </a>
-          <!-- Logo End -->
+    <!-- Navbar -->
+    <!-- <section class="bg-gradient-to-br from-white to-blue-100"> -->
+    <header class="mx-auto max-w-6xl">
+      <div class="flex justify-between items-center py-4 px-6">
+        <!-- Logo Start -->
+        <a href="/">
+          <img src="logo.png" class="h-8" alt="" />
+        </a>
+        <!-- Logo End -->
 
-          <nav class="hidden md:flex space-x-6 font-medium">
-            <a href="#" class="text-gray-700 text-sm hover:text-[#3A77EF] transition duration-300">Home</a>
-            <a href="#" class="text-gray-700 text-sm hover:text-[#3A77EF] transition duration-300">About</a>
-            <a href="#" class="text-gray-700 text-sm hover:text-[#3A77EF] transition duration-300">Programs</a>
-            <a href="#" class="text-gray-700 text-sm hover:text-[#3A77EF] transition duration-300">Contact</a>
-          </nav>
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="/" class="text-indigo-950 font-semibold text-sm hover:text-indigo-950 transition duration-300">Home</a>
+          <a href="about.html" class="text-gray-700 text-sm hover:text-indigo-950 transition duration-300">About</a>
+          <a href="#" class="text-gray-700 text-sm hover:text-indigo-950 transition duration-300">Features</a>
+          <a href="#" class="text-gray-700 text-sm hover:text-indigo-950 transition duration-300">Contact</a>
+        </nav>
 
-          <div class="flex items-center space-x-4">
-            <!-- <button class="group relative inline-flex h-9 items-center justify-center overflow-hidden rounded-md border border-gray-300 bg-white px-3 font-medium text-gray-800 text-sm cursor-pointer">
-              <span class="absolute h-0 w-0 rounded-full bg-gray-200 transition-all duration-300 group-hover:h-32 group-hover:w-32"></span>
-              <span class="relative">Sign In</span>
-            </button> -->
+        <div class="flex items-center space-x-4">
+          <button
+            class="group relative inline-flex items-center justify-center overflow-hidden gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-indigo-950 text-white hover:bg-indigo-900 h-9 rounded-md px-3 cursor-pointer">
+            <div class="translate-y-0 transition group-hover:-translate-y-[150%]">Book a Meeting</div>
+            <div class="absolute inset-0 flex items-center justify-center translate-y-[150%] transition group-hover:translate-y-0">Book a Meeting</div>
+          </button>
 
-            <button
-              class="group relative inline-flex items-center justify-center overflow-hidden gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-blue-600 text-white hover:bg-blue-500 h-9 rounded-md px-3 cursor-pointer">
-              <div class="translate-y-0 transition group-hover:-translate-y-[150%]">Book a Meeting</div>
-              <div class="absolute inset-0 flex items-center justify-center translate-y-[150%] transition group-hover:translate-y-0">Book a Meeting</div>
-            </button>
+          <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+            <i class="fas fa-bars text-gray-600 text-xl"></i>
+          </button>
+        </div>
+      </div>
 
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-              <i class="fas fa-bars text-gray-600 text-xl"></i>
-            </button>
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <div class="px-6 py-4 space-y-2 font-medium">
+          <a href="#" class="block text-gray-700 hover:text-indigo-950 transition duration-300">Home</a>
+          <a href="about.html" class="block text-gray-700 hover:text-indigo-950 transition duration-300">About</a>
+          <a href="#" class="block text-gray-700 hover:text-indigo-950 transition duration-300">Features</a>
+          <a href="#" class="block text-gray-700 hover:text-indigo-950 transition duration-300">Contact</a>
+          <a href="#" class="block text-gray-700 hover:text-indigo-950 transition duration-300">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-blue-50 py-16">
+      <!-- Grid Background -->
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:40px_40px] opacity-30"></div>
+
+      <!-- Dot Grid Background -->
+      <!-- <div class="absolute inset-0 bg-[radial-gradient(#c7d2fe_1px,transparent_1px)] bg-[size:24px_24px] opacity-30"></div> -->
+
+      <!-- Soft Line Grid -->
+      <!-- <div class="absolute inset-0 bg-[linear-gradient(to_right,#e0e7ff_1px,transparent_1px),linear-gradient(to_bottom,#e0e7ff_1px,transparent_1px)] bg-[size:80px_80px] opacity-25"></div> -->
+
+      <!-- Cross Grid -->
+      <!-- <div class="absolute inset-0 bg-[repeating-linear-gradient(45deg,#e0e7ff_0,#e0e7ff_1px,transparent_1px,transparent_24px)] opacity-20"></div> -->
+
+      <!-- Background blur -->
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-indigo-200 rounded-full blur-3xl opacity-30"></div>
+      <div class="absolute top-40 -left-24 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
+
+      <div class="relative max-w-6xl mx-auto text-center px-4">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 border border-indigo-200 bg-white/70 backdrop-blur rounded-full px-5 py-2 mb-6 shadow-sm">
+          <i class="fas fa-school text-indigo-950"></i>
+          <span class="text-sm font-semibold text-indigo-950"> Smart School ERP & LMS Platform </span>
+        </div>
+
+        <!-- Heading -->
+        <h1 class="text-2xl md:text-6xl font-bold text-indigo-950 leading-tight max-w-4xl mx-auto mb-6">
+          Run Your Entire School<br />
+          <span class="text-indigo-700">From One Powerful Platform</span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-10">Manage students, teachers, attendance, exams, fees, and communication effortlessly. Hikmatech empowers modern institutions to operate faster and smarter.</p>
+
+        <!-- Buttons -->
+        <div class="flex justify-center flex-wrap gap-4">
+          <a class="group cursor-pointer inline-flex items-center justify-center h-12 px-6 rounded-lg bg-indigo-950 text-white font-medium shadow-lg hover:bg-indigo-700 transition"> 🚀 Start Free Trial </a>
+
+          <a class="group inline-flex items-center justify-center h-12 px-6 rounded-lg border border-indigo-700 text-indigo-700 font-medium hover:bg-indigo-50 transition"> ▶ Watch Demo </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div class="bg-white/70 backdrop-blur border border-indigo-100 rounded-xl p-5 shadow-sm">
+            <h3 class="text-3xl font-bold text-indigo-950">5+</h3>
+            <p class="text-sm text-gray-600 mt-1">Schools Using</p>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur border border-indigo-100 rounded-xl p-5 shadow-sm">
+            <h3 class="text-3xl font-bold text-indigo-950">3K+</h3>
+            <p class="text-sm text-gray-600 mt-1">Students Managed</p>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur border border-indigo-100 rounded-xl p-5 shadow-sm">
+            <h3 class="text-3xl font-bold text-indigo-950">99.9%</h3>
+            <p class="text-sm text-gray-600 mt-1">System Uptime</p>
+          </div>
+
+          <div class="bg-white/70 backdrop-blur border border-indigo-100 rounded-xl p-5 shadow-sm">
+            <h3 class="text-3xl font-bold text-indigo-950">24/7</h3>
+            <p class="text-sm text-gray-600 mt-1">Support Available</p>
           </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-          <div class="px-6 py-4 space-y-2 font-medium">
-            <a href="#" class="block text-gray-700 hover:text-[#3A77EF] transition duration-300">Home</a>
-            <a href="#" class="block text-gray-700 hover:text-[#3A77EF] transition duration-300">About</a>
-            <a href="#" class="block text-gray-700 hover:text-[#3A77EF] transition duration-300">Programs</a>
-            <a href="#" class="block text-gray-700 hover:text-[#3A77EF] transition duration-300">Contact</a>
-            <a href="#" class="block text-gray-700 hover:text-[#3A77EF] transition duration-300">Sign Up</a>
-          </div>
-        </div>
-      </header>
-
-      <!-- Hero Section -->
-      <div class="py-32">
-        <div class="max-w-6xl mx-auto text-center">
-          <div class="inline-flex items-center border border-[#3A77EF] bg-[#E0EBFB] rounded-full px-4 py-[6px] mb-4">
-            <i class="fas fa-graduation-cap text-[#3A77EF]"></i>
-            <h5 class="text-sm font-semibold ml-2 text-[#020A1A]">Complete Education Management System</h5>
+        <!-- Feature row -->
+        <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div class="flex items-center gap-3 bg-white/70 backdrop-blur border border-indigo-100 rounded-xl px-4 py-3 shadow-sm">
+            <i class="fas fa-user-graduate text-indigo-700"></i>
+            <span class="text-sm font-medium text-gray-800">Student Management</span>
           </div>
 
-          <h1 class="text-7xl leading-tight md:text-5xl font-semibold text-[#020A1A] max-w-3xl mx-auto mb-6">The Learning Platform for the Modern Classroom</h1>
+          <div class="flex items-center gap-3 bg-white/70 backdrop-blur border border-indigo-100 rounded-xl px-4 py-3 shadow-sm">
+            <i class="fas fa-calendar-check text-indigo-700"></i>
+            <span class="text-sm font-medium text-gray-800">Attendance & Exams</span>
+          </div>
 
-          <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto py-2">Transform your educational experience with Eduflow's intuitive learning management system. Design engaging courses, track student progress, and foster collaboration—all in one platform.</p>
+          <div class="flex items-center gap-3 bg-white/70 backdrop-blur border border-indigo-100 rounded-xl px-4 py-3 shadow-sm">
+            <i class="fas fa-wallet text-indigo-700"></i>
+            <span class="text-sm font-medium text-gray-800">Fees & Accounting</span>
+          </div>
 
-          <div class="flex justify-center space-x-2 space-y-2">
-            <button class="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md bg-[#3A77EF] px-4 font-medium text-white duration-500 text-sm cursor-pointer">
-              <div class="translate-y-0 transition group-hover:-translate-y-[150%]">Start Free Trial</div>
-              <div class="absolute translate-y-[150%] transition group-hover:translate-y-0">Start Free Trial</div>
-            </button>
-            <button class="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md border border-[#3A77EF] px-4 font-medium text-[#3A77EF] text-sm cursor-pointer">
-              <span class="absolute h-0 w-0 rounded-full bg-blue-200 transition-all duration-300 group-hover:h-32 group-hover:w-32"></span>
-              <span class="relative">Demo Video</span>
-            </button>
+          <div class="flex items-center gap-3 bg-white/70 backdrop-blur border border-indigo-100 rounded-xl px-4 py-3 shadow-sm">
+            <i class="fas fa-users text-indigo-700"></i>
+            <span class="text-sm font-medium text-gray-800">Parent Portal</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Hero Section 2 -->
-    <div class="bg-white pt-20 px-4">
-      <div class="bg-gradient-to-br from-white to-blue-100 max-w-6xl mx-auto text-center relative border-3 border-white hover:border-3 hover:border-blue-600 p-8 md:p-8 rounded-lg">
-        <h1 class="text-2xl md:text-5xl font-extrabold text-gray-900 mb-6 relative z-10">Struggling with School Management?</h1>
-        <div class="px-[175px] py-8 top-7 right-[129px] bg-blue-300 absolute z-0 transform rotate-1"></div>
-        <p class="text-2xl md:text-5xl font-bold text-blue-600 mb-8 relative z-10">You're <span class="text-red-500">NOT</span> Alone</p>
-        <p class="text-lg md:text-xl text-gray-700 leading-relaxed relative z-10">
-          Many educational institutions face challenges with outdated systems, inefficient administration, and communication gaps.
-          <strong class="text-gray-900">Don't let these issues hold your school back.</strong>
-        </p>
+    <!-- Trusted By Section -->
+    <section class="py-20 bg-white relative">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <!-- Heading -->
+        <p class="text-sm font-semibold text-indigo-700 mb-3 uppercase tracking-wide">Trusted Nationwide</p>
+
+        <h2 class="text-3xl md:text-4xl font-bold text-indigo-950 mb-4">Trusted by 5+ Schools Across Bangladesh</h2>
+
+        <p class="text-gray-600 max-w-2xl mx-auto mb-12">Schools, colleges, and madrasahs rely on Hikmatech to manage academics, administration, and communication—all from one platform.</p>
+
+        <!-- Logos -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center opacity-80">
+          <img src="https://madrasatussunnah.org/assets/madrasatus-sunnah-logo.svg" alt="Madrasatus Sunnah" class="mx-auto h-12 grayscale hover:grayscale-0 transition" />
+          <img src="https://hikmatech.com/af/image/logo/1763737931aflogo.png" alt="Akij Faoundation Madrasah" class="mx-auto h-12 grayscale hover:grayscale-0 transition" />
+          <img src="https://taqwa.hikmatech.com/image/logo/1766377881Untitled-removebg-preview3.png" alt="At Taqwa Masjid Madrasha" class="mx-auto h-12 grayscale hover:grayscale-0 transition" />
+          <img src="https://png.pngtree.com/png-clipart/20211017/original/pngtree-school-logo-png-image_6851480.png" alt="School Logo" class="mx-auto h-12 grayscale hover:grayscale-0 transition" />
+          <img src="https://png.pngtree.com/png-clipart/20230819/original/pngtree-school-logo-design-template-vector-png-image_10513951.png" alt="College Logo" class="mx-auto h-12 grayscale hover:grayscale-0 transition" />
+          <img src="https://images.seeklogo.com/logo-png/61/2/the-smart-school-logo-png_seeklogo-611298.png" alt="Madrasah Logo" class="mx-auto h-12 grayscale hover:grayscale-0 transition" />
+        </div>
+
+        <!-- Trust line -->
+        <div class="mt-12 inline-flex items-center gap-3 bg-indigo-50 border border-indigo-100 rounded-full px-6 py-3 text-sm text-indigo-700">
+          <i class="fas fa-shield-alt text-indigo-700"></i>
+          Trusted by Schools, Colleges & Madrasahs Nationwide
+        </div>
       </div>
-    </div>
-    <div class="flex justify-center space-x-2 space-y-2 pt-10">
-      <button class="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md bg-[#3A77EF] px-4 font-medium text-white duration-500 text-sm cursor-pointer">
-        <div class="translate-y-0 transition group-hover:-translate-y-[150%]">Start Free Trial</div>
-        <div class="absolute translate-y-[150%] transition group-hover:translate-y-0">Start Free Trial</div>
-      </button>
-      <button class="group relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md border border-[#3A77EF] px-4 font-medium text-[#3A77EF] text-sm cursor-pointer">
-        <span class="absolute h-0 w-0 rounded-full bg-blue-200 transition-all duration-300 group-hover:h-32 group-hover:w-32"></span>
-        <span class="relative">Demo Video</span>
-      </button>
-    </div>
+    </section>
 
-    <!-- Hero Section 3 -->
-    <section class="relative bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- Left Content -->
-          <div>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">Transform the Way You Manage <span class="text-blue-600">Your School</span></h1>
-            <p class="mt-6 text-lg text-gray-600 max-w-xl">A modern school management solution designed to simplify operations, save time, and create better learning experiences.</p>
+    <!-- Problems → Solutions -->
+    <section class="py-24 bg-gradient-to-b from-white to-indigo-50 relative">
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Section header -->
+        <div class="text-center mb-16">
+          <p class="text-sm font-semibold text-indigo-700 uppercase tracking-wide mb-3">From Chaos to Control</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-indigo-950 mb-4">Turn Daily Challenges Into Simple Workflows</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Most institutions struggle with manual processes. Hikmatech replaces them with smart automation.</p>
+        </div>
 
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a href="#demo" class="px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold shadow-md transition"> Get a Demo </a>
-              <a href="#features" class="px-6 py-3 text-gray-700 bg-white border border-gray-300 hover:border-blue-600 hover:text-blue-600 rounded-lg font-semibold transition"> Learn More </a>
-            </div>
+        <!-- Content -->
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <!-- Problems -->
+          <div class="bg-white border border-red-100 rounded-2xl p-8 shadow-sm">
+            <h3 class="text-xl font-semibold text-red-600 mb-6 flex items-center gap-2">
+              <i class="fas fa-times-circle"></i>
+              Common Problems
+            </h3>
+
+            <ul class="space-y-4 text-gray-700">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-exclamation-circle text-red-500 mt-1"></i>
+                Manual attendance wastes time and causes errors
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-exclamation-circle text-red-500 mt-1"></i>
+                Excel-based results are hard to manage and share
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-exclamation-circle text-red-500 mt-1"></i>
+                Fee collection becomes confusing and unorganized
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-exclamation-circle text-red-500 mt-1"></i>
+                Poor communication with parents and guardians
+              </li>
+            </ul>
           </div>
 
-          <!-- Right Image / Illustration -->
-          <div class="relative">
-            <div class="rounded-2xl shadow-xl overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&q=80&w=1080&fit=crop" alt="School Management" class="w-full object-cover" />
-            </div>
+          <!-- Solutions -->
+          <div class="bg-indigo-950 text-white rounded-2xl p-8 shadow-lg">
+            <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
+              <i class="fas fa-check-circle text-green-400"></i>
+              Hikmatech Solutions
+            </h3>
+
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check text-green-400 mt-1"></i>
+                Automated attendance with real-time tracking
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check text-green-400 mt-1"></i>
+                One-click result generation & publishing
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check text-green-400 mt-1"></i>
+                Integrated fees, accounts & payment reports
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check text-green-400 mt-1"></i>
+                Parent app, SMS & instant notifications
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Hero Section 4 -->
-    <section class="relative bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- Left Content -->
-          <div>
-            <span class="inline-block text-sm font-medium text-blue-600 mb-4"> Smart. Simple. Secure. </span>
-            <h1 class="text-5xl font-extrabold text-gray-900 leading-tight">
-              Professional School <br />
-              Management Software
-            </h1>
-            <p class="mt-6 text-lg text-gray-600 max-w-lg">Streamline your school operations with powerful tools for administration, students, and parents—all in one platform.</p>
-
-            <div class="mt-10 flex flex-wrap gap-4">
-              <a href="#get-started" class="px-7 py-3 rounded-lg bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition"> Get Started </a>
-              <a href="#contact" class="px-7 py-3 rounded-lg border border-gray-300 text-gray-700 font-semibold hover:border-blue-600 hover:text-blue-600 transition"> Contact Sales </a>
-            </div>
-          </div>
-
-          <!-- Right Side: Dashboard Mockup -->
-          <div class="relative">
-            <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden p-4">
-              <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&q=80&w=1080&fit=crop" alt="Dashboard Preview" class="rounded-lg w-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hero Section 5 -->
-
-    <!-- Features Overview Section -->
-    <div class="bg-white py-16 px-4">
-      <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">The Smart School Ecosystem</h2>
-        <p class="text-lg text-gray-600 mb-12">See how our platform simplifies education for everyone involved.</p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105">
-            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white mb-4">
-              <i class="ri-graduation-cap-line text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Student & Parent Portal</h3>
-            <p class="text-sm text-gray-600">Unified profiles with academic records, attendance, and instant communication.</p>
-          </div>
-
-          <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105">
-            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white mb-4">
-              <i class="ri-book-2-line text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Academic & Grading</h3>
-            <p class="text-sm text-gray-600">Streamline grade entry, report card generation, and curriculum management.</p>
-          </div>
-
-          <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105">
-            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white mb-4">
-              <i class="ri-message-2-line text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Seamless Communication</h3>
-            <p class="text-sm text-gray-600">Real-time messaging, announcements, and a central communication hub.</p>
-          </div>
-
-          <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105">
-            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white mb-4">
-              <i class="ri-survey-line text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Automated Attendance</h3>
-            <p class="text-sm text-gray-600">Effortlessly track student and staff attendance with a few clicks.</p>
-          </div>
-
-          <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105">
-            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white mb-4">
-              <i class="ri-money-dollar-box-line text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Financial Management</h3>
-            <p class="text-sm text-gray-600">Manage fees, track payments, and generate financial reports easily.</p>
-          </div>
-
-          <div class="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105">
-            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white mb-4">
-              <i class="ri-book-3-line text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Library & Resources</h3>
-            <p class="text-sm text-gray-600">A full-featured library system to track books and manage resources.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Features Section -->
-    <section class="py-16 bg-[#F3F5F8]">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="mx-auto text-center mb-12">
-          <div class="inline-flex items-center border border-[#3A77EF] bg-[#E0EBFB] rounded-full px-4 py-2 mb-4">
-            <i class="ri-rocket-2-line text-[#3A77EF]"></i>
-            <h4 class="text-sm font-semibold ml-2 text-[#020A1A]">Module</h4>
-          </div>
-
-          <h3 class="text-4xl md:text-3xl font-bold text-[#020A1A] mb-8">Empowering Educational Innovation</h3>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="relative bg-white rounded-lg shadow-md p-6">
-            <div class="absolute top-0 left-0 bg-[#3A77EF] rounded-tl-lg rounded-br-2xl w-12 h-12 flex items-center justify-center">
-              <i class="ri-graduation-cap-line text-white text-xl"></i>
-            </div>
-            <h3 class="text-lg font-semibold mb-2 mt-12 text-[#020A1A]">Academic Management</h3>
-            <p class="text-sm text-gray-700">Manage students, attendance, examinations, results, class routines, and academic settings from a single hub.</p>
-          </div>
-
-          <div class="relative bg-white rounded-lg shadow-md p-6">
-            <div class="absolute top-0 left-0 bg-[#3A77EF] rounded-tl-lg rounded-br-2xl w-12 h-12 flex items-center justify-center">
-              <i class="ri-presentation-line text-white text-xl"></i>
-            </div>
-            <h3 class="text-lg font-semibold mb-2 mt-12 text-[#020A1A]">Administration & HR</h3>
-            <p class="text-sm text-gray-700">Handle staff management, appointments, payroll, and hostel & transportation management effortlessly.</p>
-          </div>
-
-          <div class="relative bg-white rounded-lg shadow-md p-6">
-            <div class="absolute top-0 left-0 bg-[#3A77EF] rounded-tl-lg rounded-br-2xl w-12 h-12 flex items-center justify-center">
-              <i class="ri-wallet-3-line text-white text-xl"></i>
-            </div>
-            <h3 class="text-lg font-semibold mb-2 mt-12 text-[#020A1A]">Finance & Accounts</h3>
-            <p class="text-sm text-gray-700">Automate fee collection, manage accounts, track sales & purchases, handle requisitions, and generate reports.</p>
-          </div>
-
-          <div class="relative bg-white rounded-lg shadow-md p-6">
-            <div class="absolute top-0 left-0 bg-[#3A77EF] rounded-tl-lg rounded-br-2xl w-12 h-12 flex items-center justify-center">
-              <i class="ri-store-2-line text-white font-xs text-xl"></i>
-            </div>
-            <h3 class="text-lg font-semibold mb-2 mt-12 text-[#020A1A]">Inventory & Products</h3>
-            <p class="text-sm text-gray-700">Manage school inventory, products, sales, and purchases efficiently with full control over stock and supplies.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- All Features -->
-    <section id="features" class="py-20 md:py-32 bg-gray-50">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-          <div class="inline-flex items-center border border-[#3A77EF] bg-[#E0EBFB] rounded-full px-4 py-2 mb-4">
-            <i class="fas fa-rocket text-[#3A77EF]"></i>
-            <h4 class="text-sm font-medium ml-2 text-[#020A1A]">Our Features</h4>
-          </div>
-          <h2 class="text-3xl md:text-4xl font-semibold mb-4">All-in-One School Management</h2>
-          <p class="text-lg text-gray-600">Manage every aspect of your school efficiently with our comprehensive software.</p>
+    <!-- Core Modules -->
+    <section class="py-24 bg-white relative">
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <p class="text-sm font-semibold text-indigo-700 uppercase tracking-wide mb-3">Core Modules</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-indigo-950 mb-4">Everything You Need to Run Your Institution</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Powerful, flexible modules designed to simplify daily operations and improve academic performance.</p>
         </div>
 
+        <!-- Modules Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Student Management -->
           <div class="fade-in">
             <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
-                <i class="ri-user-line text-2xl"></i>
-              </div>
-              <h3 class="text-lg font-semibold mb-2">HR Management</h3>
-              <p class="text-gray-600">Manage staff records, payroll, and appointments efficiently.</p>
-            </div>
-          </div>
-
-          <div class="fade-in">
-            <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-indigo-900">
                 <i class="ri-profile-line text-2xl"></i>
               </div>
               <h3 class="text-lg font-semibold mb-2">Student Management</h3>
@@ -302,625 +263,465 @@
             </div>
           </div>
 
+          <!-- Teacher & Staff -->
           <div class="fade-in">
             <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-indigo-900">
+                <i class="ri-user-line text-2xl"></i>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Teacher & Staff</h3>
+              <p class="text-gray-600">Manage teacher and staff profiles, roles, and records.</p>
+            </div>
+          </div>
+
+          <!-- Attendance -->
+          <div class="fade-in">
+            <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-indigo-900">
                 <i class="ri-checkbox-line text-2xl"></i>
               </div>
-              <h3 class="text-lg font-semibold mb-2">Student Attendance</h3>
-              <p class="text-gray-600">Track daily attendance for students and staff seamlessly.</p>
+              <h3 class="text-lg font-semibold mb-2">Attendance</h3>
+              <p class="text-gray-600">Track daily student and staff attendance effortlessly.</p>
             </div>
           </div>
 
+          <!-- Exams & Results -->
           <div class="fade-in">
             <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-indigo-900">
                 <i class="ri-file-list-2-line text-2xl"></i>
               </div>
-              <h3 class="text-lg font-semibold mb-2">Examination & Result</h3>
-              <p class="text-gray-600">Create exams, manage results, and generate report cards easily.</p>
+              <h3 class="text-lg font-semibold mb-2">Exams & Results</h3>
+              <p class="text-gray-600">Create exams, publish results, and generate report cards.</p>
             </div>
           </div>
 
+          <!-- Fees & Accounting -->
           <div class="fade-in">
             <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
-                <i class="ri-calendar-line text-2xl"></i>
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-indigo-900">
+                <i class="ri-wallet-3-line text-2xl"></i>
               </div>
-              <h3 class="text-lg font-semibold mb-2">Class Routine</h3>
-              <p class="text-gray-600">Plan and manage class schedules for all grades and sections.</p>
+              <h3 class="text-lg font-semibold mb-2">Fees & Accounting</h3>
+              <p class="text-gray-600">Manage fees, payments, dues, and financial reports.</p>
             </div>
           </div>
 
+          <!-- Online Classes -->
           <div class="fade-in">
             <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
-                <i class="ri-eye-line text-2xl"></i>
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-indigo-900">
+                <i class="ri-video-line text-2xl"></i>
               </div>
-              <h3 class="text-lg font-semibold mb-2">Student Observation</h3>
-              <p class="text-gray-600">Record teacher observations and notes for student development.</p>
+              <h3 class="text-lg font-semibold mb-2">Online Classes</h3>
+              <p class="text-gray-600">Conduct live classes and share recorded lessons.</p>
             </div>
           </div>
 
+          <!-- Parent Portal -->
           <div class="fade-in">
             <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
-                <i class="ri-calendar-check-line text-2xl"></i>
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-indigo-900">
+                <i class="ri-group-line text-2xl"></i>
               </div>
-              <h3 class="text-lg font-semibold mb-2">Appointment</h3>
-              <p class="text-gray-600">Schedule meetings with parents, staff, or external visitors.</p>
+              <h3 class="text-lg font-semibold mb-2">Parent Portal</h3>
+              <p class="text-gray-600">Parents stay updated with attendance, results, and notices.</p>
             </div>
           </div>
 
+          <!-- Reports & Analytics -->
           <div class="fade-in">
             <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
-                <i class="ri-car-line text-2xl"></i>
-              </div>
-              <h3 class="text-lg font-semibold mb-2">Transportation</h3>
-              <p class="text-gray-600">Manage buses, routes, and student transport assignments.</p>
-            </div>
-          </div>
-
-          <div class="fade-in">
-            <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
-                <i class="ri-shopping-bag-line text-2xl"></i>
-              </div>
-              <h3 class="text-lg font-semibold mb-2">Requisition & Product</h3>
-              <p class="text-gray-600">Handle product inventory, stock requisitions, and supplies.</p>
-            </div>
-          </div>
-
-          <div class="fade-in">
-            <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
-                <i class="ri-shopping-cart-line text-2xl"></i>
-              </div>
-              <h3 class="text-lg font-semibold mb-2">Sales & Purchase</h3>
-              <p class="text-gray-600">Track sales and purchase of products efficiently.</p>
-            </div>
-          </div>
-
-          <div class="fade-in">
-            <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
-                <i class="ri-file-text-line text-2xl"></i>
-              </div>
-              <h3 class="text-lg font-semibold mb-2">Accounts</h3>
-              <p class="text-gray-600">Manage school finances, fees, and generate financial reports.</p>
-            </div>
-          </div>
-
-          <div class="fade-in">
-            <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-indigo-900">
                 <i class="ri-file-chart-line text-2xl"></i>
               </div>
-              <h3 class="text-lg font-semibold mb-2">Reports</h3>
-              <p class="text-gray-600">Generate detailed academic, financial, and operational reports.</p>
-            </div>
-          </div>
-
-          <div class="fade-in">
-            <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
-                <i class="ri-hotel-line text-2xl"></i>
-              </div>
-              <h3 class="text-lg font-semibold mb-2">Hostel Management</h3>
-              <p class="text-gray-600">Manage hostel rooms, student accommodation, and related facilities.</p>
-            </div>
-          </div>
-
-          <div class="fade-in">
-            <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
-                <i class="ri-eye-line text-2xl"></i>
-              </div>
-              <h3 class="text-lg font-semibold mb-2">Student Observation</h3>
-              <p class="text-gray-600">Record teachers’ notes and monitor student development.</p>
-            </div>
-          </div>
-
-          <div class="fade-in">
-            <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
-                <i class="ri-book-2-line text-2xl"></i>
-              </div>
-              <h3 class="text-lg font-semibold mb-2">Subjects & Classes</h3>
-              <p class="text-gray-600">Manage subjects, classes, and sections effortlessly.</p>
-            </div>
-          </div>
-
-          <!-- Session & Term Management -->
-          <div class="fade-in">
-            <div class="h-full bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:shadow-md hover:border-blue-200 transition-all">
-              <div class="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-blue-100 text-blue-600">
-                <i class="ri-calendar-2-line text-2xl"></i>
-              </div>
-              <h3 class="text-lg font-semibold mb-2">Session & Term</h3>
-              <p class="text-gray-600">Define school sessions, terms, and academic calendars.</p>
+              <h3 class="text-lg font-semibold mb-2">Reports & Analytics</h3>
+              <p class="text-gray-600">Generate academic, financial, and operational insights.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Powerful Features -->
-    <section id="features" class="py-20 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <!-- How It Works -->
+    <section class="py-24 bg-gradient-to-b from-indigo-50 to-white relative">
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Section Header -->
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Powerful Features for Modern Schools</h2>
-          <p class="mt-4 text-lg text-gray-600">All-in-one platform to manage academics, communication, finance, and operations with ease.</p>
+          <p class="text-sm font-semibold text-indigo-700 uppercase tracking-wide mb-3">How It Works</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-indigo-950 mb-4">Get Started in 3 Simple Steps</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">No technical skills required. Setup takes minutes, not days.</p>
         </div>
 
-        <!-- Core Academic & Student Management -->
-        <div class="mb-16">
-          <h3 class="text-2xl font-medium text-blue-600 mb-8 text-center"><i class="ri-book-2-line"></i> Core Academic & Student Management</h3>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-profile-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Comprehensive Student Profiles</h4>
-              <p class="text-gray-600">Manage enrollment, academic records, and personal details in one place.</p>
-            </div>
+        <!-- Steps -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-indigo-100 text-indigo-900 flex items-center justify-center text-xl font-bold">1</div>
+            <h3 class="text-lg font-semibold mb-2">Setup Your Institution</h3>
+            <p class="text-gray-600">Configure your school details, classes, sessions, and settings.</p>
+          </div>
 
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-calendar-2-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Class & Routine Management</h4>
-              <p class="text-gray-600">Plan, schedule, and organize classes seamlessly.</p>
-            </div>
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-indigo-100 text-indigo-900 flex items-center justify-center text-xl font-bold">2</div>
+            <h3 class="text-lg font-semibold mb-2">Add Students & Teachers</h3>
+            <p class="text-gray-600">Easily import or add students, teachers, and staff profiles.</p>
+          </div>
 
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-check-double-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Attendance Tracking</h4>
-              <p class="text-gray-600">Smart attendance solutions for students and staff.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-bar-chart-2-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Examination & Result Analytics</h4>
-              <p class="text-gray-600">Create exams, publish results, and analyze performance with ease.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-book-2-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Hifz & Specialized Tracking</h4>
-              <p class="text-gray-600">Tailored result management for Hifz schools and professional exams.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-quill-pen-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Student Observation & Daily Diary</h4>
-              <p class="text-gray-600">Record teacher notes and share progress with parents.</p>
-            </div>
+          <!-- Step 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-indigo-100 text-indigo-900 flex items-center justify-center text-xl font-bold">3</div>
+            <h3 class="text-lg font-semibold mb-2">Manage Everything Online</h3>
+            <p class="text-gray-600">Track attendance, exams, fees, reports, and communication from one dashboard.</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Communication & Engagement -->
-        <div class="mb-16">
-          <h3 class="text-2xl font-medium text-blue-600 mb-8 text-center"><i class="ri-message-2-line"></i> Communication & Engagement</h3>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-calendar-event-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Parent-Teacher Appointments</h4>
-              <p class="text-gray-600">Schedule and manage meetings with ease.</p>
-            </div>
+    <!-- Product Preview -->
 
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-user-shared-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Student, Teacher & Guardian Login</h4>
-              <p class="text-gray-600">Dedicated dashboards for every role.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-notification-3-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Instant Notifications</h4>
-              <p class="text-gray-600">Keep everyone informed and connected in real time.</p>
-            </div>
-          </div>
+    <!-- User Benefits Tabs -->
+    <section class="py-24 bg-indigo-50">
+      <div class="max-w-5xl mx-auto px-4">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold text-indigo-700 uppercase tracking-wide mb-3">Who Is It For?</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-indigo-950 mb-4">Benefits for Everyone</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Parents stay informed. Teachers save time. Admin stays in control. Students stay engaged.</p>
         </div>
 
-        <!-- Finance & HR -->
-        <div class="mb-16">
-          <h3 class="text-2xl font-medium text-blue-600 mb-8 text-center"><i class="ri-bank-card-line"></i> Finance & HR</h3>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-bank-card-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Fees & Accounts Management</h4>
-              <p class="text-gray-600">Simplify billing, collections, and financial reports.</p>
-            </div>
+        <!-- Tabs -->
+        <div x-data="{ tab: 'admin' }">
+          <!-- Tab Buttons -->
+          <div class="flex flex-wrap justify-center gap-4 mb-10">
+            <button @click="tab='admin'" :class="tab==='admin' ? 'bg-indigo-950 text-white' : 'bg-white text-indigo-950'" class="px-6 py-2 rounded-full border border-indigo-200 font-medium transition">Admin</button>
 
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-briefcase-4-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Payroll & Provident Funds</h4>
-              <p class="text-gray-600">Fully customizable staff payroll and fund management.</p>
-            </div>
+            <button @click="tab='teacher'" :class="tab==='teacher' ? 'bg-indigo-950 text-white' : 'bg-white text-indigo-950'" class="px-6 py-2 rounded-full border border-indigo-200 font-medium transition">Teachers</button>
 
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-time-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Leave & Attendance Management</h4>
-              <p class="text-gray-600">Track student and employee leave requests efficiently.</p>
-            </div>
+            <button @click="tab='parent'" :class="tab==='parent' ? 'bg-indigo-950 text-white' : 'bg-white text-indigo-950'" class="px-6 py-2 rounded-full border border-indigo-200 font-medium transition">Parents</button>
+
+            <button @click="tab='student'" :class="tab==='student' ? 'bg-indigo-950 text-white' : 'bg-white text-indigo-950'" class="px-6 py-2 rounded-full border border-indigo-200 font-medium transition">Students</button>
           </div>
-        </div>
 
-        <!-- Resource & Operations -->
-        <div class="mb-16">
-          <h3 class="text-2xl font-medium text-blue-600 mb-8 text-center"><i class="ri-community-line"></i> Resource & Operations</h3>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-bus-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Transportation Management</h4>
-              <p class="text-gray-600">Assign routes, track buses, and ensure safe travel.</p>
+          <!-- Tab Content -->
+          <div class="relative bg-white rounded-3xl p-10 shadow-lg border border-indigo-100 overflow-hidden">
+            <!-- Decorative gradient -->
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-indigo-200 rounded-full blur-3xl opacity-30"></div>
+
+            <!-- Admin -->
+            <div x-show="tab==='admin'" class="relative z-10">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-14 h-14 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center">
+                  <i class="fas fa-user-shield text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-indigo-950">For Admin</h3>
+              </div>
+
+              <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-5 rounded-xl bg-indigo-50 border border-indigo-100">
+                  <i class="fas fa-cogs text-indigo-700 mb-3"></i>
+                  <p class="font-medium">Complete Control</p>
+                  <span class="text-sm text-gray-600">Academics, finance & operations in one dashboard.</span>
+                </div>
+                <div class="p-5 rounded-xl bg-indigo-50 border border-indigo-100">
+                  <i class="fas fa-chart-line text-indigo-700 mb-3"></i>
+                  <p class="font-medium">Smart Reports</p>
+                  <span class="text-sm text-gray-600">Real-time insights for better decisions.</span>
+                </div>
+                <div class="p-5 rounded-xl bg-indigo-50 border border-indigo-100">
+                  <i class="fas fa-file-alt text-indigo-700 mb-3"></i>
+                  <p class="font-medium">Less Paperwork</p>
+                  <span class="text-sm text-gray-600">Automation reduces errors and saves time.</span>
+                </div>
+              </div>
             </div>
 
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-hotel-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Hostel Management</h4>
-              <p class="text-gray-600">Manage rooms, occupancy, and student accommodation.</p>
+            <!-- Teacher -->
+            <div x-show="tab==='teacher'" class="relative z-10">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-14 h-14 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center">
+                  <i class="fas fa-chalkboard-teacher text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-indigo-950">For Teachers</h3>
+              </div>
+
+              <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-5 rounded-xl bg-indigo-50 border border-indigo-100">
+                  <i class="fas fa-calendar-check text-indigo-700 mb-3"></i>
+                  <p class="font-medium">Easy Attendance</p>
+                  <span class="text-sm text-gray-600">Mark attendance in seconds.</span>
+                </div>
+                <div class="p-5 rounded-xl bg-indigo-50 border border-indigo-100">
+                  <i class="fas fa-clipboard-list text-indigo-700 mb-3"></i>
+                  <p class="font-medium">Simple Exams</p>
+                  <span class="text-sm text-gray-600">Create exams and publish results easily.</span>
+                </div>
+                <div class="p-5 rounded-xl bg-indigo-50 border border-indigo-100">
+                  <i class="fas fa-clock text-indigo-700 mb-3"></i>
+                  <p class="font-medium">Save Time</p>
+                  <span class="text-sm text-gray-600">Focus more on teaching, less on admin.</span>
+                </div>
+              </div>
             </div>
 
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-archive-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Inventory & Requisition</h4>
-              <p class="text-gray-600">Complete stock, requisition, and purchase handling.</p>
+            <!-- Parent -->
+            <div x-show="tab==='parent'" class="relative z-10">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-14 h-14 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center">
+                  <i class="fas fa-users text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-indigo-950">For Parents</h3>
+              </div>
+
+              <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-5 rounded-xl bg-indigo-50 border border-indigo-100">
+                  <i class="fas fa-bell text-indigo-700 mb-3"></i>
+                  <p class="font-medium">Live Updates</p>
+                  <span class="text-sm text-gray-600">Attendance & result notifications.</span>
+                </div>
+                <div class="p-5 rounded-xl bg-indigo-50 border border-indigo-100">
+                  <i class="fas fa-wallet text-indigo-700 mb-3"></i>
+                  <p class="font-medium">Fee Transparency</p>
+                  <span class="text-sm text-gray-600">View payments and dues anytime.</span>
+                </div>
+                <div class="p-5 rounded-xl bg-indigo-50 border border-indigo-100">
+                  <i class="fas fa-comment-dots text-indigo-700 mb-3"></i>
+                  <p class="font-medium">Instant Communication</p>
+                  <span class="text-sm text-gray-600">Notices & SMS alerts from school.</span>
+                </div>
+              </div>
             </div>
 
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-bookmark-3-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Library Management</h4>
-              <p class="text-gray-600">Organize books, lending, and digital resources.</p>
-            </div>
+            <!-- Student -->
+            <div x-show="tab==='student'" class="relative z-10">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-14 h-14 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center">
+                  <i class="fas fa-user-graduate text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-indigo-950">For Students</h3>
+              </div>
 
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-file-copy-2-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Customizable Templates</h4>
-              <p class="text-gray-600">Personalize certificates, report cards, and ID cards.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Digital Learning & Extras -->
-        <div>
-          <h3 class="text-2xl font-medium text-blue-600 mb-8 text-center"><i class="ri-macbook-line"></i> Digital Learning & Extras</h3>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-macbook-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Online Quiz & Exams</h4>
-              <p class="text-gray-600">Conduct secure quizzes and assessments.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <i class="ri-dashboard-3-line text-3xl text-blue-600 mb-4"></i>
-              <h4 class="text-lg font-semibold mb-2">Academic Progress Dashboard</h4>
-              <p class="text-gray-600">Get a full view of student performance at a glance.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
-              <!-- <i class="ri-info-card-line text-3xl text-blue-600 mb-4"></i> -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="text-blue-600" viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
-                <path
-                  d="M3 6H21V18H3V6ZM2 4C1.44772 4 1 4.44772 1 5V19C1 19.5523 1.44772 20 2 20H22C22.5523 20 23 19.5523 23 19V5C23 4.44772 22.5523 4 22 4H2ZM13 8H19V10H13V8ZM18 12H13V14H18V12ZM10.5 10C10.5 11.3807 9.38071 12.5 8 12.5C6.61929 12.5 5.5 11.3807 5.5 10C5.5 8.61929 6.61929 7.5 8 7.5C9.38071 7.5 10.5 8.61929 10.5 10ZM8 13.5C6.067 13.5 4.5 15.067 4.5 17H11.5C11.5 15.067 9.933 13.5 8 13.5Z"></path>
-              </svg>
-              <h4 class="text-lg font-semibold mb-2">All-in-One ID Card Solution</h4>
-              <p class="text-gray-600">Design and generate student/staff ID cards instantly.</p>
+              <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-5 rounded-xl bg-indigo-50 border border-indigo-100">
+                  <i class="fas fa-book-open text-indigo-700 mb-3"></i>
+                  <p class="font-medium">Study Materials</p>
+                  <span class="text-sm text-gray-600">Access lessons and class resources.</span>
+                </div>
+                <div class="p-5 rounded-xl bg-indigo-50 border border-indigo-100">
+                  <i class="fas fa-chart-bar text-indigo-700 mb-3"></i>
+                  <p class="font-medium">Progress Tracking</p>
+                  <span class="text-sm text-gray-600">Monitor performance and results.</span>
+                </div>
+                <div class="p-5 rounded-xl bg-indigo-50 border border-indigo-100">
+                  <i class="fas fa-bullseye text-indigo-700 mb-3"></i>
+                  <p class="font-medium">Stay Organized</p>
+                  <span class="text-sm text-gray-600">Timetables, notices & tasks in one place.</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <div class="max-w-6xl mx-auto mt-12">
-      <div class="bg-blue-50 border border-blue-100 border-2 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between">
-        <div class="mb-6 md:mb-0 text-center md:text-left">
-          <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">Ready to modernize your school's management?</h2>
-          <p class="text-gray-600">Join countless educational institutions already benefiting from our comprehensive school management system.</p>
-        </div>
-        <div class="md:ml-8 flex-shrink-0">
-          <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-sm py-2 px-16 rounded-md transition duration-300 w-full text-center md:w-auto">Get Started Today</a>
-        </div>
-      </div>
-    </div>
+    <!-- Testimonials -->
+    <section class="py-24 bg-gradient-to-b from-indigo-50 to-white">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <!-- Header -->
+        <p class="text-sm font-semibold text-indigo-700 uppercase tracking-wide mb-3">Testimonials</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-indigo-950 mb-4">What Educators Say About Hikmatech</h2>
+        <p class="text-gray-600 mb-12">Real feedback from institutions using Hikmatech every day.</p>
 
-    <div class="container mx-auto px-4 py-16 max-w-6xl">
-      <div class="text-center mb-12">
-        <div class="inline-flex items-center border border-[#3A77EF] bg-[#E0EBFB] rounded-full px-4 py-2 mb-4">
-          <i class="fas fa-sack-dollar text-[#3A77EF]"></i>
-          <h4 class="text-sm font-semibold ml-2 text-[#020A1A]">Pricing Plans</h4>
-        </div>
-        <h1 class="text-3xl md:text-4xl font-semibold text-gray-900">Simple, Transparent Pricing</h1>
-        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Choose the plan that works best for your educational needs. All plans include core features to get you started.</p>
-      </div>
+        <!-- Slider -->
+        <div
+          x-data="{
+        active: 0,
+        testimonials: [
+          {
+            text: 'Hikmatech reduced our administrative workload by nearly 60%. Attendance, results, and fees are now fully digital.',
+            name: 'Abdul Karim',
+            role: 'Principal, Al Noor High School',
+            initial: 'A'
+          },
+          {
+            text: 'We switched from Excel to Hikmatech within one week. Teachers save time and parents stay informed.',
+            name: 'Sadia Rahman',
+            role: 'Admin Officer, Green Valley School',
+            initial: 'S'
+          },
+          {
+            text: 'The parent portal is excellent. Fee transparency and result updates are now instant.',
+            name: 'Maulana Hasan',
+            role: 'Head Teacher, Darul Uloom Madrasah',
+            initial: 'M'
+          }
+        ]
+      }"
+          class="relative">
+          <!-- Card -->
+          <div class="bg-white rounded-3xl p-10 shadow-lg border border-indigo-100 transition-all">
+            <div class="text-indigo-700 text-5xl mb-6">“</div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 relative">
-          <div class="absolute top-0 right-0 bg-[#3A77EF] text-white text-xs font-sm px-4 py-1 rounded-bl-lg">Most Popular</div>
-          <div class="p-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-3">Bronze Package</h2>
-            <p class="text-gray-600 mb-6">Designed for schools with up to 500 students.</p>
-            <div class="mb-6">
-              <p class="text-gray-600 text-sm mb-1">Installation Fee</p>
+            <p class="text-lg text-gray-700 leading-relaxed mb-8" x-text="testimonials[active].text"></p>
 
-              <div class="flex items-center gap-3">
-                <span class="text-lg text-gray-400 line-through">৳60000</span>
-                <span class="text-3xl font-bold text-green-600">৳30000</span>
-                <span class="bg-red-100 text-red-600 text-xs font-semibold px-2 py-1 rounded"> 50% OFF </span>
+            <div class="flex items-center justify-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-indigo-700 text-white flex items-center justify-center font-semibold" x-text="testimonials[active].initial"></div>
+              <div class="text-left">
+                <p class="font-semibold text-indigo-950" x-text="testimonials[active].name"></p>
+                <p class="text-sm text-gray-600" x-text="testimonials[active].role"></p>
               </div>
-            </div>
-            <button class="w-full cursor-pointer bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700 transition duration-300">Contact Sales</button>
-          </div>
-          <div class="border-t border-gray-200 p-6 space-y-4">
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600"><strong>Installation Fee:</strong> <span class="line-through">৳60,000</span> ৳30,000</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600"><strong>Monthly Fee:</strong> ৳5,000</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600"><strong>Yearly Hosting:</strong> ৳1,500 per GB</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Full-featured web application</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Professional school website</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Android apps for Teacher, Accountant, & Student</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">SMS charges based on usage</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">24/7 premium support</p>
             </div>
           </div>
-        </div>
 
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-2 border-[#3A77EF] transform scale-105 md:scale-100 md:translate-y-0 relative">
-          <div class="absolute top-0 right-0 bg-[#3A77EF] text-white text-xs font-sm px-4 py-1 rounded-bl-lg">Flexible per-student rate</div>
-          <div class="p-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-3">Silver Package</h2>
-            <p class="text-gray-600 mb-6">Best for schools with more than 500 students.</p>
-            <div class="mb-6">
-              <p class="text-gray-600 text-sm mb-1">Installation Fee</p>
-              <div class="flex items-center gap-3">
-                <span class="text-lg text-gray-400 line-through">৳100000</span>
-                <span class="text-3xl font-bold text-green-600">৳50000</span>
-                <span class="bg-red-100 text-red-600 text-xs font-semibold px-2 py-1 rounded"> 50% OFF </span>
-              </div>
-            </div>
-            <button class="w-full cursor-pointer bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300">Contact Sales</button>
-          </div>
-          <div class="border-t border-gray-200 p-6 space-y-4">
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600"><strong>Installation Fee:</strong> <span class="line-through">৳100,000</span> ৳50,000</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600"><strong>Monthly Fee:</strong> ৳10 per student</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600"><strong>Yearly Hosting:</strong> ৳1,500 per GB</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Full-featured web application</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Professional school website</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Android apps for Teacher, Accountant, & Student</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">SMS charges based on usage</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">24/7 premium support</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 relative">
-          <div class="absolute top-0 right-0 bg-[#3A77EF] text-white text-xs font-sm px-4 py-1 rounded-bl-lg">No Accounts Needed</div>
-          <div class="p-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-3">Gold Package</h2>
-            <p class="text-gray-600 mb-6">For schools that don't need the accounting feature.</p>
-            <div class="mb-6">
-              <p class="text-gray-600 text-sm mb-1">Installation Fee</p>
-              <div class="flex items-center gap-3">
-                <span class="text-lg text-gray-400 line-through">৳50000</span>
-                <span class="text-3xl font-bold text-green-600">৳25000</span>
-                <span class="bg-red-100 text-red-600 text-xs font-semibold px-2 py-1 rounded"> 50% OFF </span>
-              </div>
-            </div>
-            <button class="w-full cursor-pointer bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700 transition duration-300">Contact Sales</button>
-          </div>
-          <div class="border-t border-gray-200 p-6 space-y-4">
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600"><strong>Installation Fee:</strong> <span class="line-through">৳50,000</span> ৳25,000</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600"><strong>Monthly Fee:</strong> ৳10 per student</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600"><strong>Yearly Hosting:</strong> ৳1,500 per GB</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Full-featured web application</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Professional school website</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">Android apps for Teacher & Student</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">SMS charges based on usage</p>
-            </div>
-            <div class="flex items-start text-sm">
-              <div class="flex-shrink-0">
-                <i class="fa-regular fa-circle-check text-blue-500"></i>
-              </div>
-              <p class="ml-2 text-gray-600">24/7 premium support</p>
-            </div>
+          <!-- Dots -->
+          <div class="flex justify-center gap-3 mt-8">
+            <template x-for="(item, index) in testimonials" :key="index">
+              <button @click="active = index" class="w-3 h-3 rounded-full transition" :class="active === index ? 'bg-indigo-950' : 'bg-indigo-300'"></button>
+            </template>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="bg-gray-50 py-20 px-6">
-      <div class="max-w-6xl mx-auto">
+    <!-- Pricing Preview -->
+    <section class="py-24 bg-white">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <!-- Header -->
+        <p class="text-sm font-semibold text-indigo-700 uppercase tracking-wide mb-3">Pricing</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-indigo-950 mb-4">Simple & Transparent Pricing</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-14">No hidden charges. Flexible plans designed for institutions of all sizes.</p>
+
+        <!-- Pricing Card -->
+        <div class="bg-indigo-50 border border-indigo-100 rounded-3xl p-10 max-w-3xl mx-auto shadow-sm">
+          <!-- Features -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left mb-10">
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-indigo-700 mt-1"></i>
+              <div>
+                <p class="font-medium text-indigo-950">No Setup Fee</p>
+                <p class="text-sm text-gray-600">Get started without any upfront cost</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i class="fas fa-sync-alt text-indigo-700 mt-1"></i>
+              <div>
+                <p class="font-medium text-indigo-950">Monthly / Yearly Plans</p>
+                <p class="text-sm text-gray-600">Choose a plan that fits your institution</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i class="fas fa-headset text-indigo-700 mt-1"></i>
+              <div>
+                <p class="font-medium text-indigo-950">Support Included</p>
+                <p class="text-sm text-gray-600">Dedicated help whenever you need it</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <a href="#" class="inline-flex items-center gap-2 px-8 h-12 rounded-lg bg-indigo-700 text-white font-semibold hover:bg-indigo-800 transition">
+            <i class="fas fa-tags"></i>
+            View Pricing
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <p class="text-sm font-semibold text-indigo-700 uppercase tracking-wide mb-3">FAQ</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-indigo-950 mb-4">Frequently Asked Questions</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Everything you need to know before getting started with Hikmatech.</p>
+        </div>
+
+        <!-- Accordion -->
+        <div class="space-y-4">
+          <!-- Item -->
+          <div x-data="{ open: false }" class="border border-indigo-100 rounded-xl">
+            <button @click="open = !open" class="w-full flex justify-between items-center p-5 text-left">
+              <span class="font-medium text-indigo-950"> Is training included? </span>
+              <i class="fas fa-chevron-down text-indigo-700 transition" :class="open && 'rotate-180'"></i>
+            </button>
+            <div x-show="open" x-collapse class="px-5 pb-5 text-gray-600">Yes. We provide complete onboarding and training for admins and staff, ensuring your institution is fully set up and confident to use the system.</div>
+          </div>
+
+          <!-- Item -->
+          <div x-data="{ open: false }" class="border border-indigo-100 rounded-xl">
+            <button @click="open = !open" class="w-full flex justify-between items-center p-5 text-left">
+              <span class="font-medium text-indigo-950"> Is our data secure? </span>
+              <i class="fas fa-chevron-down text-indigo-700 transition" :class="open && 'rotate-180'"></i>
+            </button>
+            <div x-show="open" x-collapse class="px-5 pb-5 text-gray-600">Absolutely. We use secure servers, encrypted connections, regular backups, and strict access control to protect your data.</div>
+          </div>
+
+          <!-- Item -->
+          <div x-data="{ open: false }" class="border border-indigo-100 rounded-xl">
+            <button @click="open = !open" class="w-full flex justify-between items-center p-5 text-left">
+              <span class="font-medium text-indigo-950"> Can we customize modules? </span>
+              <i class="fas fa-chevron-down text-indigo-700 transition" :class="open && 'rotate-180'"></i>
+            </button>
+            <div x-show="open" x-collapse class="px-5 pb-5 text-gray-600">Yes. Hikmatech modules are flexible and can be customized based on your institution’s structure and requirements.</div>
+          </div>
+
+          <!-- Item -->
+          <div x-data="{ open: false }" class="border border-indigo-100 rounded-xl">
+            <button @click="open = !open" class="w-full flex justify-between items-center p-5 text-left">
+              <span class="font-medium text-indigo-950"> Is it mobile friendly? </span>
+              <i class="fas fa-chevron-down text-indigo-700 transition" :class="open && 'rotate-180'"></i>
+            </button>
+            <div x-show="open" x-collapse class="px-5 pb-5 text-gray-600">Yes. Hikmatech is fully responsive and works smoothly on mobile, tablet, and desktop devices.</div>
+          </div>
+
+          <!-- Item -->
+          <div x-data="{ open: false }" class="border border-indigo-100 rounded-xl">
+            <button @click="open = !open" class="w-full flex justify-between items-center p-5 text-left">
+              <span class="font-medium text-indigo-950"> Do you provide ongoing support? </span>
+              <i class="fas fa-chevron-down text-indigo-700 transition" :class="open && 'rotate-180'"></i>
+            </button>
+            <div x-show="open" x-collapse class="px-5 pb-5 text-gray-600">Yes. We offer continuous support via phone, WhatsApp, and email to ensure smooth daily operations.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="relative py-28 bg-indigo-950 overflow-hidden">
+      <!-- Background effects -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-indigo-700 rounded-full blur-3xl opacity-30"></div>
+      <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-600 rounded-full blur-3xl opacity-30"></div>
+
+      <div class="relative max-w-4xl mx-auto px-4 text-center">
         <!-- Heading -->
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-extrabold text-gray-900 mb-3">Meet Our Team</h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">Dedicated professionals committed to transforming school management.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Digitize Your Institution?</h2>
+
+        <!-- Sub text -->
+        <p class="text-indigo-200 text-lg mb-10">Join schools, colleges, and madrasahs already simplifying their daily operations with Hikmatech.</p>
+
+        <!-- CTA Buttons -->
+        <div class="flex justify-center flex-wrap gap-4">
+          <!-- Primary CTA -->
+          <a href="#" class="inline-flex items-center justify-center gap-2 px-8 h-12 rounded-lg bg-white text-indigo-950 font-semibold hover:bg-indigo-100 transition">
+            <i class="fas fa-rocket"></i>
+            Start Your Free Trial
+          </a>
+
+          <!-- Secondary CTA -->
+          <a href="#" class="inline-flex items-center justify-center gap-2 px-8 h-12 rounded-lg border border-indigo-300 text-white hover:bg-white/10 transition">
+            <i class="fas fa-headset"></i>
+            Talk to Our Team
+          </a>
         </div>
 
-        <!-- Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          <!-- Team Member -->
-          <div class="group relative bg-white rounded-2xl shadow-md p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border border-gray-100">
-            <!-- Profile image -->
-            <div class="relative w-32 h-32 mx-auto mb-6">
-              <img
-                src="https://scontent.fdac37-1.fna.fbcdn.net/v/t39.30808-1/367427873_3593064287594598_6311083391173302027_n.jpg?stp=c293.0.1417.1417a_dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=1d2534&_nc_ohc=Eah6BKUnne4Q7kNvwFIgHVB&_nc_oc=Adn3-mPQb_RzI4t_WK4eN2tyrDCQZn9atIir93pDmQQyycOyzXRkIqbqSNt0Ucq8xVk&_nc_zt=24&_nc_ht=scontent.fdac37-1.fna&_nc_gid=yPvSccE4pWeGAmcazmLMhA&oh=00_AfWhMgTaERj5CwuOYMrhIIUbgVP3yVwVOD1Jfa_NYOcGcw&oe=68BCFAE2"
-                alt="Sakibul Islam"
-                class="w-32 h-32 rounded-full object-cover ring-4 ring-blue-100 group-hover:ring-blue-400 transition" />
-            </div>
-            <!-- Name -->
-            <h3 class="text-xl font-bold text-gray-900">Sakibul Islam</h3>
-            <p class="text-sm text-blue-600 font-semibold mb-6">Lead Developer</p>
-            <!-- Social -->
-            <div class="flex justify-center space-x-4 text-gray-400 group-hover:text-blue-600 transition-colors">
-              <a href="#"><i class="ri-facebook-fill text-xl"></i></a>
-              <a href="#"><i class="ri-linkedin-box-fill text-xl"></i></a>
-              <a href="#"><i class="ri-twitter-fill text-xl"></i></a>
-            </div>
-          </div>
-
-          <!-- Repeat for others -->
-          <div class="group relative bg-white rounded-2xl shadow-md p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border border-gray-100">
-            <div class="relative w-32 h-32 mx-auto mb-6">
-              <img
-                src="https://scontent.fdac37-1.fna.fbcdn.net/v/t39.30808-1/481076169_1205023261229820_5801327483728447033_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=109&ccb=1-7&_nc_sid=1d2534&_nc_ohc=84vhZlYDQRcQ7kNvwGnv1Nm&_nc_oc=AdkcvIGlKc_OaabcPhFPhIojrht-UxD5776qE-uHZ4O9DseZgBsW0-MtaxYKKorK06E&_nc_zt=24&_nc_ht=scontent.fdac37-1.fna&_nc_gid=Mbq8o8cKThMd20Eq6dSDzg&oh=00_AfUr5vkq2gz78eV3GWOMbM-YNGs2k9c5VkYvu8VxUAGXhA&oe=68BD144E"
-                alt="Tanvirul Islam"
-                class="w-32 h-32 rounded-full object-cover ring-4 ring-blue-100 group-hover:ring-blue-400 transition" />
-            </div>
-            <h3 class="text-xl font-bold text-gray-900">Tanvirul Islam</h3>
-            <p class="text-sm text-blue-600 font-semibold mb-6">Product Manager</p>
-            <div class="flex justify-center space-x-4 text-gray-400 group-hover:text-blue-600 transition-colors">
-              <a href="#"><i class="ri-facebook-fill text-xl"></i></a>
-              <a href="#"><i class="ri-linkedin-box-fill text-xl"></i></a>
-              <a href="#"><i class="ri-twitter-fill text-xl"></i></a>
-            </div>
-          </div>
-
-          <!-- Minhajur Rahman -->
-          <div class="group relative bg-white rounded-2xl shadow-md p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border border-gray-100">
-            <div class="relative w-32 h-32 mx-auto mb-6">
-              <img
-                src="https://scontent.fdac37-1.fna.fbcdn.net/v/t39.30808-6/502451761_3338658119621627_3807819211054915988_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=FtrLuxgRGvQQ7kNvwFKGVXt&_nc_oc=Adla2mNamOw7dsp5j2kG3h-UvIr38M4eI_vNercIj9oT0pqIUf8G0YbvdWGqINx0byo&_nc_zt=23&_nc_ht=scontent.fdac37-1.fna&_nc_gid=VfVmnzZMSy5KnH2tCk1p7w&oh=00_AfUzBHIcClqB2rV4eiT48JkEfp8KKQVogLWYjD2cesWjBA&oe=68BCE390"
-                alt="Minhajur Rahman"
-                class="w-32 h-32 rounded-full object-cover ring-4 ring-blue-100 group-hover:ring-blue-400 transition" />
-            </div>
-            <h3 class="text-xl font-bold text-gray-900">Minhajur Rahman</h3>
-            <p class="text-sm text-blue-600 font-semibold mb-6">Honourable Advisor</p>
-            <div class="flex justify-center space-x-4 text-gray-400 group-hover:text-blue-600 transition-colors">
-              <a href="#"><i class="ri-facebook-fill text-xl"></i></a>
-              <a href="#"><i class="ri-linkedin-box-fill text-xl"></i></a>
-              <a href="#"><i class="ri-twitter-fill text-xl"></i></a>
-            </div>
-          </div>
-
-          <!-- Ahmed Ovik -->
-          <div class="group relative bg-white rounded-2xl shadow-md p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border border-gray-100">
-            <div class="relative w-32 h-32 mx-auto mb-6">
-              <img
-                src="https://scontent.fdac37-1.fna.fbcdn.net/v/t51.75761-15/475480290_18055264415062468_8609940709294555597_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=cSsRvJW14kEQ7kNvwEBvIeo&_nc_oc=AdkD1SurHUnAeanjkvWVwbEGvL6p0QneXTAr3t1dPzaf0YJNjA1oygfOp9nFbHpwjeE&_nc_zt=23&_nc_ht=scontent.fdac37-1.fna&_nc_gid=u2Kl7VPRD1eLgsuq2sjZ1Q&oh=00_AfXGnMEODWydYsSXOdY1XPU40uJjmp0UVO0XIMrpuT-8hg&oe=68BD161A"
-                alt="Ahmed Ovik"
-                class="w-32 h-32 rounded-full object-cover ring-4 ring-blue-100 group-hover:ring-blue-400 transition" />
-            </div>
-            <h3 class="text-xl font-bold text-gray-900">Ahmed Ovik</h3>
-            <p class="text-sm text-blue-600 font-semibold mb-6">Marketing Specialist</p>
-            <div class="flex justify-center space-x-4 text-gray-400 group-hover:text-blue-600 transition-colors">
-              <a href="#"><i class="ri-facebook-fill text-xl"></i></a>
-              <a href="#"><i class="ri-linkedin-box-fill text-xl"></i></a>
-              <a href="#"><i class="ri-twitter-fill text-xl"></i></a>
-            </div>
-          </div>
-        </div>
+        <!-- Trust Note -->
+        <p class="text-sm text-indigo-300 mt-8">No setup fee • Free onboarding • Dedicated support</p>
       </div>
-    </div>
+    </section>
 
     <div id="contact" class="bg-gray-50 py-20">
       <div class="container mx-auto px-4 max-w-6xl">
@@ -939,18 +740,18 @@
 
             <div class="space-y-6">
               <div class="flex items-center space-x-4">
-                <div class="bg-blue-100 text-blue-600 py-2 px-3 rounded-md"><i class="ri-customer-service-line text-xl"></i></div>
+                <div class="bg-blue-100 text-indigo-900 py-2 px-3 rounded-md"><i class="ri-customer-service-line text-xl"></i></div>
                 <div>
                   <p class="text-sm text-gray-500">Call us</p>
-                  <p class="text-lg font-semibold text-gray-800">+880 1234 567 890</p>
+                  <p class="text-lg font-semibold text-gray-800">+880 1590-089467</p>
                 </div>
               </div>
 
               <div class="flex items-center space-x-4">
-                <div class="bg-blue-100 text-blue-600 py-2 px-3 rounded-md"><i class="ri-mail-unread-line text-xl"></i></div>
+                <div class="bg-blue-100 text-indigo-900 py-2 px-3 rounded-md"><i class="ri-mail-unread-line text-xl"></i></div>
                 <div>
                   <p class="text-sm text-gray-500">Email us</p>
-                  <p class="text-lg font-semibold text-gray-800">info@schoolsoft.com</p>
+                  <p class="text-lg font-semibold text-gray-800">info@hikmatech.com</p>
                 </div>
               </div>
             </div>
@@ -972,7 +773,7 @@
                 <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
                 <textarea rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Write your message..."></textarea>
               </div>
-              <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-blue-700 transition">Send Message</button>
+              <button type="submit" class="w-full bg-indigo-950 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-indigo-900 transition">Send Message</button>
             </form>
           </div>
         </div>
@@ -983,7 +784,7 @@
       <div class="container mx-auto px-4 max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-12">
         <!-- Brand -->
         <div>
-          <h3 class="text-2xl font-bold text-white mb-4">SchoolSoft</h3>
+          <img src="image/white logo.png" class="h-8 mb-6" alt="" />
           <p class="text-gray-400 text-sm leading-relaxed">A modern School Management Software to simplify administration, save time, and keep everything organized.</p>
         </div>
 
@@ -994,7 +795,7 @@
             <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
             <li><a href="#features" class="hover:text-white transition">Features</a></li>
             <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
-            <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
           </ul>
         </div>
 
@@ -1003,16 +804,16 @@
           <h4 class="text-white font-semibold mb-4">Contact</h4>
           <ul class="space-y-3 text-sm">
             <li class="flex items-center space-x-2">
-              <i class="ri-map-pin-line text-blue-500"></i>
+              <i class="ri-map-pin-line text-indigo-900"></i>
               <span>Dhaka, Bangladesh</span>
             </li>
             <li class="flex items-center space-x-2">
-              <i class="ri-phone-line text-blue-500"></i>
-              <span>+880 1234 567 890</span>
+              <i class="ri-phone-line text-indigo-900"></i>
+              <span>+880 1590-089467</span>
             </li>
             <li class="flex items-center space-x-2">
-              <i class="ri-mail-line text-blue-500"></i>
-              <span>info@schoolsoft.com</span>
+              <i class="ri-mail-line text-indigo-900"></i>
+              <span>info@hikmatech.com</span>
             </li>
           </ul>
         </div>
@@ -1038,11 +839,12 @@
       </div>
 
       <!-- Bottom Bar -->
-      <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">© 2025 SchoolSoft. All rights reserved.</div>
+      <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">© 2025 HikmaTech. All rights reserved.</div>
     </footer>
 
     <!-- Scripts -->
     <script src="script.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
 </html>

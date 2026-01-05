@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Hikmatech</title>
+    <link rel="icon" type="image/png" href="https://hikmatech.com/image/favicon.png" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  </head>
+
+  <body class="font-[Inter] bg-white text-gray-800">
+    <!-- Navbar -->
+    <header class="mx-auto max-w-6xl">
+      <div class="flex justify-between items-center py-4 px-6">
+        <!-- Logo Start -->
+        <a href="/">
+          <img src="image/logo.png" class="h-8" alt="" />
+        </a>
+        <!-- Logo End -->
+
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="/" class="text-gray-700 text-sm hover:text-indigo-950 transition duration-300">Home</a>
+          <a href="about.html" class="text-indigo-950 font-semibold text-sm hover:text-indigo-950 transition duration-300">About</a>
+          <a href="#" class="text-gray-700 text-sm hover:text-indigo-950 transition duration-300">Features</a>
+          <a href="contact.html" class="text-gray-700 text-sm hover:text-indigo-950 transition duration-300">Contact</a>
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <!-- <button class="group relative inline-flex h-9 items-center justify-center overflow-hidden rounded-md border border-gray-300 bg-white px-3 font-medium text-gray-800 text-sm cursor-pointer">
+              <span class="absolute h-0 w-0 rounded-full bg-gray-200 transition-all duration-300 group-hover:h-32 group-hover:w-32"></span>
+              <span class="relative">Sign In</span>
+            </button> -->
+
+          <button
+            class="group relative inline-flex items-center justify-center overflow-hidden gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-indigo-950 text-white hover:bg-indigo-900 h-9 rounded-md px-3 cursor-pointer">
+            <div class="translate-y-0 transition group-hover:-translate-y-[150%]">Book a Meeting</div>
+            <div class="absolute inset-0 flex items-center justify-center translate-y-[150%] transition group-hover:translate-y-0">Book a Meeting</div>
+          </button>
+
+          <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+            <i class="fas fa-bars text-gray-600 text-xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <div class="px-6 py-4 space-y-2 font-medium">
+          <a href="/" class="block text-gray-700 hover:text-indigo-950 transition duration-300">Home</a>
+          <a href="about.html" class="block text-gray-700 hover:text-indigo-950 transition duration-300">About</a>
+          <a href="#" class="block text-gray-700 hover:text-indigo-950 transition duration-300">Features</a>
+          <a href="contact.html" class="block text-gray-700 hover:text-indigo-950 transition duration-300">Contact</a>
+          <a href="#" class="block text-gray-700 hover:text-indigo-950 transition duration-300">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-indigo-50 to-blue-100 py-28 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-indigo-950 mb-4">About Hikmatech</h1>
+        <p class="text-gray-600 text-lg leading-relaxed">We’re dedicated to transforming education through innovative technology — empowering schools, teachers, and students for a smarter future.</p>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <img src="image/about-illustration.svg" alt="Our Story" class="rounded-xl shadow-md" />
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-indigo-950 mb-4">Our Story</h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Founded with a mission to modernize educational management, <strong>Hikmatech</strong> bridges the gap between innovation and learning. Our goal is to help schools and institutions streamline their operations, communicate effectively, and nurture student success through digital tools.
+          </p>
+          <p class="text-gray-600 leading-relaxed">From humble beginnings, we’ve grown into a trusted partner for schools across Bangladesh — delivering a reliable, all-in-one school management platform.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="bg-gray-50 py-20">
+      <div class="max-w-6xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-bold text-indigo-950 mb-4">Our Core Values</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">The foundation of Hikmatech is built on innovation, integrity, and collaboration.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+        <div class="p-8 bg-white rounded-xl shadow hover:shadow-md transition">
+          <i class="ri-lightbulb-flash-line text-4xl text-indigo-950 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Innovation</h3>
+          <p class="text-gray-600">We constantly explore new ideas to create modern solutions for educational management.</p>
+        </div>
+
+        <div class="p-8 bg-white rounded-xl shadow hover:shadow-md transition">
+          <i class="ri-shield-check-line text-4xl text-indigo-950 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Integrity</h3>
+          <p class="text-gray-600">We believe in transparency, trust, and doing what’s right for our clients and users.</p>
+        </div>
+
+        <div class="p-8 bg-white rounded-xl shadow hover:shadow-md transition">
+          <i class="ri-team-line text-4xl text-indigo-950 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Collaboration</h3>
+          <p class="text-gray-600">We work together with schools, educators, and communities to achieve shared success.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-bold text-indigo-950 mb-4">Why Choose Hikmatech?</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">We go beyond software — offering partnership, reliability, and impact-driven technology.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="p-8 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
+          <i class="ri-rocket-2-line text-4xl text-indigo-950 mb-4"></i>
+          <h3 class="text-lg font-semibold mb-2">Comprehensive Solution</h3>
+          <p class="text-gray-600">From academics to accounts, Hikmatech covers every area of school operations.</p>
+        </div>
+
+        <div class="p-8 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
+          <i class="ri-smartphone-line text-4xl text-indigo-950 mb-4"></i>
+          <h3 class="text-lg font-semibold mb-2">Mobile Ready</h3>
+          <p class="text-gray-600">Teacher, parent, and student apps for learning on the go — anytime, anywhere.</p>
+        </div>
+
+        <div class="p-8 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
+          <i class="ri-customer-service-2-line text-4xl text-indigo-950 mb-4"></i>
+          <h3 class="text-lg font-semibold mb-2">24/7 Support</h3>
+          <p class="text-gray-600">Our dedicated team ensures smooth operation and quick technical assistance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="bg-gray-50 py-20">
+      <div class="max-w-6xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-bold text-indigo-950 mb-3">Meet Our Team</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">The passionate people powering Hikmatech’s mission.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto px-6">
+        <div class="bg-white rounded-2xl shadow p-8 text-center hover:shadow-lg transition">
+          <img src="image/Sakibul Islam.jpg" alt="Sakibul Islam" class="w-24 h-24 mx-auto rounded-full object-cover mb-4 ring-4 ring-indigo-100" />
+          <h3 class="font-semibold text-gray-900">Sakibul Islam</h3>
+          <p class="text-indigo-900 text-sm mb-3">Lead Developer</p>
+          <div class="flex justify-center space-x-3 text-gray-500">
+            <a href="https://facebook.com/shakibul517" class="hover:text-indigo-950"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="hover:text-indigo-950"><i class="ri-linkedin-box-fill"></i></a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-8 text-center hover:shadow-lg transition">
+          <img src="image/Tanvirul Islam.png" class="w-24 h-24 mx-auto rounded-full object-cover mb-4 ring-4 ring-indigo-100" />
+          <h3 class="font-semibold text-gray-900">Tanvirul Islam</h3>
+          <p class="text-indigo-900 text-sm mb-3">Product Manager</p>
+          <div class="flex justify-center space-x-3 text-gray-500">
+            <a href="https://facebook.com/tanvirulislm" class="hover:text-indigo-950"><i class="ri-facebook-fill"></i></a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-8 text-center hover:shadow-lg transition">
+          <img src="image/Minhajur Rahman.jpg" class="w-24 h-24 mx-auto rounded-full object-cover mb-4 ring-4 ring-indigo-100" />
+          <h3 class="font-semibold text-gray-900">Minhajur Rahman</h3>
+          <p class="text-indigo-900 text-sm mb-3">Advisor</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-8 text-center hover:shadow-lg transition">
+          <img src="image/ovik.jpg" class="w-24 h-24 mx-auto rounded-full object-cover mb-4 ring-4 ring-indigo-100" />
+          <h3 class="font-semibold text-gray-900">Ahmed Ovik</h3>
+          <p class="text-indigo-900 text-sm mb-3">Marketing Specialist</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="relative py-28 bg-indigo-950 overflow-hidden">
+      <!-- Background effects -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-indigo-700 rounded-full blur-3xl opacity-30"></div>
+      <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-600 rounded-full blur-3xl opacity-30"></div>
+
+      <div class="relative max-w-4xl mx-auto px-4 text-center">
+        <!-- Heading -->
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Digitize Your Institution?</h2>
+
+        <!-- Sub text -->
+        <p class="text-indigo-200 text-lg mb-10">Join schools, colleges, and madrasahs already simplifying their daily operations with Hikmatech.</p>
+
+        <!-- CTA Buttons -->
+        <div class="flex justify-center flex-wrap gap-4">
+          <!-- Primary CTA -->
+          <a href="#" class="inline-flex items-center justify-center gap-2 px-8 h-12 rounded-lg bg-white text-indigo-950 font-semibold hover:bg-indigo-100 transition">
+            <i class="fas fa-rocket"></i>
+            Start Your Free Trial
+          </a>
+
+          <!-- Secondary CTA -->
+          <a href="#" class="inline-flex items-center justify-center gap-2 px-8 h-12 rounded-lg border border-indigo-300 text-white hover:bg-white/10 transition">
+            <i class="fas fa-headset"></i>
+            Talk to Our Team
+          </a>
+        </div>
+
+        <!-- Trust Note -->
+        <p class="text-sm text-indigo-300 mt-8">No setup fee • Free onboarding • Dedicated support</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-12 px-6">
+        <div>
+          <img src="image/white logo.png" class="h-8 mb-6" />
+          <p class="text-gray-400 text-sm">A modern School Management Software to simplify administration and save time.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+            <li><a href="#" class="hover:text-white">Features</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <ul class="space-y-3 text-sm">
+            <li><i class="ri-map-pin-line text-indigo-900"></i> Dhaka, Bangladesh</li>
+            <li><i class="ri-phone-line text-indigo-900"></i> +880 1590-089467</li>
+            <li><i class="ri-mail-line text-indigo-900"></i> info@hikmatech.com</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+          <div class="flex space-x-3">
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-full hover:bg-blue-600 transition">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-full hover:bg-sky-400 transition">
+              <i class="ri-twitter-x-line"></i>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-gray-800 rounded-full hover:bg-pink-500 transition">
+              <i class="ri-instagram-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">© 2025 Hikmatech. All rights reserved.</div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
